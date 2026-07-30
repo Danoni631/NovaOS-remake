@@ -11,6 +11,7 @@
 #include "../Drivers/mouse.h"
 #include "../Drivers/qemu.h"
 #include "../Hardware/cpu.h"
+#include "../Hardware/gpu.h"
 #include "../Hardware/cmos.h"
 #include "../Graphics/graphics.h"
 #include "../Timer/timer.h"
@@ -240,7 +241,7 @@ void ProcessShellCMD(char* command, int x, int y)
         Print(" ###       ############       Video Mode: ", 0xFF00FFFF); Print("VESA BIOS Extensions\n", 0xFFFFFFFF);
         Print(" ###        ##########        CPU: ", 0xFF00FFFF); ShowCPUName();
         Print(" ###       ###########        Date: ", 0xFF00FFFF); GetCMOSDate(); Print("\n", 0x00);
-        Print(" ###      #####   #####       \n", 0xFF00FFFF);
+        Print(" ###      #####   #####       GPU:\n", 0xFF00FFFF); ShowGPUName();
         Print("   #      ####      ###       ", 0xFF00FFFF);
         Print("\f\f", 0xFF0E1A14);
         Print("\f\f", 0xFF1B2A21);
