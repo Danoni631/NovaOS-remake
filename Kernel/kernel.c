@@ -19,6 +19,7 @@
 #include "../Drivers/sb16.h"
 #include "../Drivers/ata.h"
 #include "../Hardware/cpu.h"
+#include "../Hardware/gpu.h"
 #include "../Hardware/pci.h"
 #include "../Hardware/disk.h"
 #include "../Hardware/cmos.h"
@@ -198,6 +199,7 @@ void main(struct multiboot_info* mbinfo, DWORD addr)
     ShowCMOSMem();
     ListDisks();
     ShowCPUInfo();
+    ShowGPUInfo();
     ShowPCIDevices();
 
     Sleep(2);
